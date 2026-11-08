@@ -3,8 +3,10 @@
 ## Authors
 
 - **Benjamin Moran**. Author, maintainer.
+  [](https://orcid.org/0000-0002-6515-6722)
 
-- **Thomas Payne**. Author.
+- **Thomas Payne**. Author, contributor.
+  [](https://orcid.org/0000-0002-5530-3717)
 
 ## Citation
 
