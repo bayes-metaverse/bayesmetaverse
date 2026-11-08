@@ -1,172 +1,118 @@
-<!-- README for the Bayesian Metaverse website / GitHub organisation profile -->
-<!-- Hex paths assume images are stored in man/figures/hex/ — replace with final paths -->
 
-<p align="center">
-  <img src="man/figures/hex/bayesmetaverse.png" alt="Bayesian Metaverse logo" width="160">
-</p>
+# Bayes-Metaverse <a href="https://bayesian-metaverse.github.io/bayesmetaverse/"><img src="man/figures/logo.png" align="right" height="160" alt="Bayes-Metaverse logo" /></a>
 
-<h1 align="center">Bayesian Metaverse</h1>
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+<!-- badges: end -->
 
-<p align="center"><em>Tools, methods and resources for Bayesian meta-analysis.</em></p>
+***Tools, methods and resources for Bayesian meta-analysis.***
 
-<p align="center">
-  <img src="man/figures/hex/entry.png"       alt="data entry package hex" height="110">
-  <img src="man/figures/hex/inspectR.png"    alt="inspectR hex"           height="110">
-  <img src="man/figures/hex/robbR.png"       alt="robbR hex"              height="110">
-  <img src="man/figures/hex/bayesma.png"     alt="bayesma hex"            height="110">
-  <img src="man/figures/hex/bayesfoRest.png" alt="bayesfoRest hex"        height="110">
-  <img src="man/figures/hex/bayestsa.png"    alt="Bayesian TSA hex"       height="110">
-</p>
+## What is Bayes-Metaverse?
 
----
+Bayes-Metaverse brings together an R package suite, practical guidance and links to established software to support a transparent, reproducible workflow for Bayesian meta-analysis (Bayesian MA). The aim is to help researchers move from a clearly specified review question through data preparation, model fitting and checking, sensitivity analysis, and interpretation.
 
-## Overview
+The project is organised around a **workflow rather than a single model**. Different reviews need different likelihoods, effect measures, priors and sensitivity analyses; the workflow makes those choices explicit and documents why they were made. See [Getting Started](https://bayesian-metaverse.github.io/bayesmetaverse/articles/bayesmetaverse.html) for the full workflow.
 
-Bayesian Metaverse brings together an R package suite, practical guidance and links to established software to support a transparent, reproducible workflow for Bayesian meta-analysis (Bayesian MA). The aim is to help researchers move from a clearly specified review question through data preparation, model fitting and checking, sensitivity analysis, and interpretation.
-
-The project is organised around a **workflow rather than a single model**. Different reviews need different likelihoods, effect measures, priors and sensitivity analyses; the workflow makes those choices explicit and documents why they were made. It builds on the [bayesma workflow diagram](https://blmoran.github.io/bayesma/articles/workflow-diagram.html).
-
----
-
-## The package suite
-
-| Hex | Package | Workflow stage | Purpose | Status |
-|:---:|:--------|:---------------|:--------|:-------|
-| <img src="man/figures/hex/entry.png" width="60"> | **entRy** *(name TBC)* | Data preparation | Shiny app for structured data extraction and entry (one row per study; binary, continuous or count outcomes), exporting analysis-ready data. | In development · [preview](https://blmoran.github.io/bayesma/articles/data-entry.html) |
-| <img src="man/figures/hex/inspectR.png" width="60"> | **inspectR** | Trustworthiness | Assess and document study trustworthiness using the [INSPECT-SR](https://doi.org/10.1136/bmj-2024-082233) framework. Complements, but does not replace, risk-of-bias assessment. | In development |
-| <img src="man/figures/hex/robbR.png" width="60"> | **robbR** | Risk of bias | Create and present risk-of-bias visualisations (traffic-light and summary plots). | Available · repository TBA |
-| <img src="man/figures/hex/bayesma.png" width="60"> | **bayesma** | Modelling | Fit, compare, check and interpret Bayesian meta-analysis models in R using Stan. | Available · [docs](https://blmoran.github.io/bayesma/) |
-| <img src="man/figures/hex/bayesfoRest.png" width="60"> | **bayesfoRest** | Visualisation | Forest plots and other displays that bring posterior results and study-level information together. | Available · [docs](https://blmoran.github.io/bayesfoRest/) |
-| <img src="man/figures/hex/bayestsa.png" width="60"> | **Bayesian TSA** *(name TBC)* | Sequential evidence | Bayesian sequential assessment of accumulating meta-analytic evidence, informed by Spence, Steinsaltz & Fanshawe (2016). | In development |
+## Package suite
 
 The packages are designed to work together while remaining useful as standalone tools.
 
----
+<div class="bmv-suite">
+<div class="bmv-pkg">
+<a class="bmv-hex" href="https://blmoran.github.io/bayesmaDatR/"><img src="man/figures/bayesmaDatR.png" alt="bayesmaDatR hex" height="170"></a>
+<div class="bmv-pkg-text">
+<p class="bmv-pkg-desc"><b>bayesmaDatR</b> · Shiny app for structured data extraction and entry, producing analysis-ready meta-analysis data</p>
+<p class="bmv-pkg-badges"><a href="https://github.com/BLMoran/bayesmaDatR"><img src="https://img.shields.io/badge/GitHub-bayesmaDatR-1F6F8B?logo=github" alt="GitHub"></a> <a href="https://blmoran.github.io/bayesmaDatR/"><img src="https://img.shields.io/badge/docs-bayesmaDatR-1F6F8B" alt="docs"></a> <img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="experimental"></p>
+</div>
+</div>
+<div class="bmv-pkg">
+<a class="bmv-hex" href="https://github.com/BLMoran/inspectR"><img src="man/figures/inspectR.png" alt="inspectR hex" height="170"></a>
+<div class="bmv-pkg-text">
+<p class="bmv-pkg-desc"><b>inspectR</b> · Assess and document study trustworthiness using the INSPECT-SR framework</p>
+<p class="bmv-pkg-badges"><a href="https://github.com/BLMoran/inspectR"><img src="https://img.shields.io/badge/GitHub-inspectR-1F6F8B?logo=github" alt="GitHub"></a> <img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="experimental"></p>
+</div>
+</div>
+<div class="bmv-pkg">
+<a class="bmv-hex" href="https://blmoran.github.io/robbR/"><img src="man/figures/robbR.png" alt="robbR hex" height="170"></a>
+<div class="bmv-pkg-text">
+<p class="bmv-pkg-desc"><b>robbR</b> · Create and present risk-of-bias visualisations</p>
+<p class="bmv-pkg-badges"><a href="https://github.com/BLMoran/robbR"><img src="https://img.shields.io/badge/GitHub-robbR-1F6F8B?logo=github" alt="GitHub"></a> <a href="https://blmoran.github.io/robbR/"><img src="https://img.shields.io/badge/docs-robbR-1F6F8B" alt="docs"></a> <img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="experimental"></p>
+</div>
+</div>
+<div class="bmv-pkg">
+<a class="bmv-hex" href="https://blmoran.github.io/bayesma/"><img src="man/figures/bayesma.png" alt="bayesma hex" height="170"></a>
+<div class="bmv-pkg-text">
+<p class="bmv-pkg-desc"><b>bayesma</b> · Fit, check, compare and interpret Bayesian meta-analysis models using Stan</p>
+<p class="bmv-pkg-badges"><a href="https://github.com/BLMoran/bayesma"><img src="https://img.shields.io/badge/GitHub-bayesma-1F6F8B?logo=github" alt="GitHub"></a> <a href="https://blmoran.github.io/bayesma/"><img src="https://img.shields.io/badge/docs-bayesma-1F6F8B" alt="docs"></a> <img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="experimental"></p>
+</div>
+</div>
+<div class="bmv-pkg">
+<a class="bmv-hex" href="https://blmoran.github.io/bayesfoRest/"><img src="man/figures/bayesfoRest.png" alt="bayesfoRest hex" height="170"></a>
+<div class="bmv-pkg-text">
+<p class="bmv-pkg-desc"><b>bayesfoRest</b> · Forest plots and visualisations that bring posterior results and study-level information together</p>
+<p class="bmv-pkg-badges"><a href="https://github.com/BLMoran/bayesfoRest"><img src="https://img.shields.io/badge/GitHub-bayesfoRest-1F6F8B?logo=github" alt="GitHub"></a> <a href="https://blmoran.github.io/bayesfoRest/"><img src="https://img.shields.io/badge/docs-bayesfoRest-1F6F8B" alt="docs"></a> <img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="experimental"></p>
+</div>
+</div>
+</div>
+
+A package for **Bayesian sequential meta-analysis** (trial sequential analysis), informed by Spence, Steinsaltz & Fanshawe (2016), is also in development.
 
 ## Installation
 
-Development versions of the available packages can be installed from GitHub:
+Install the whole suite with the `bayesmetaverse` meta-package:
 
 ```r
 install.packages("remotes")
+remotes::install_github("bayes-metaverse/bayesmetaverse")
+```
 
+Or install individual packages:
+
+```r
+remotes::install_github("BLMoran/bayesmaDatR")
+remotes::install_github("BLMoran/inspectR")
+remotes::install_github("BLMoran/robbR")
 remotes::install_github("BLMoran/bayesma")
 remotes::install_github("BLMoran/bayesfoRest")
 ```
 
-<!-- Future: a meta-package that installs and attaches the suite, e.g.
-```r
-remotes::install_github("bayesian-metaverse/bayesmetaverse")
-library(bayesmetaverse)
-```
--->
-
----
-
-## A principled Bayesian meta-analysis workflow
-
-Each stage lists the package(s) you would typically use. Grey nodes are related external software.
-
-```mermaid
-flowchart TD
-    classDef bmv fill:#2C5F8A,stroke:#1B3D5A,color:#fff
-    classDef ext fill:#E6E6E6,stroke:#999,color:#333
-    classDef stage fill:#fff,stroke:#2C5F8A,color:#1B3D5A
-
-    Q[/"Review question & protocol<br/>(PICO, effect measure, priors pre-specified)"/]:::stage
-
-    S1["1 · Data preparation"]:::stage
-    S2["2 · Trustworthiness assessment<br/>INSPECT-SR"]:::stage
-    S3["3 · Risk of bias assessment"]:::stage
-    S4["4 · Preliminary exploration<br/>PRIMED"]:::stage
-    S5["5 · Model specification<br/>likelihood · priors (μ, τ) · RE distribution<br/>prior predictive checks"]:::stage
-    S6["6 · Model fitting<br/>Stan MCMC"]:::stage
-    S7["7 · Diagnostics<br/>R̂ · ESS · trace · posterior predictive"]:::stage
-    S8["8 · Model comparison<br/>LOO / LOSO-CV · ELPD · CRPS"]:::stage
-    S9["9 · Small-study & publication bias<br/>selection models · PET-PEESE · RoBMA"]:::stage
-    S10["10 · Heterogeneity<br/>τ posterior · predictive distribution"]:::stage
-    S11["11 · Subgroups & meta-regression"]:::stage
-    S12["12 · Sensitivity analysis<br/>priors · exclusions · RE distribution"]:::stage
-    S13["13 · Sequential evidence<br/>Bayesian TSA"]:::stage
-    S14["14 · Interpretation & reporting<br/>posterior · CrI · P(direction) · BF"]:::stage
-
-    Q --> S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7
-    S7 -- "fails" --> S5
-    S7 --> S8 --> S9 --> S10 --> S11 --> S12 --> S13 --> S14
-
-    P1["entRy (TBC)"]:::bmv --- S1
-    P2["inspectR"]:::bmv --- S2
-    X2["scrutiny"]:::ext -.- S2
-    P3["robbR"]:::bmv --- S3
-    P5["bayesma"]:::bmv --- S5 & S6 & S7 & S8 & S10 & S11 & S12
-    X5["brms · Stan · bayesmeta · MetaStan"]:::ext -.- S6
-    X9["RoBMA"]:::ext -.- S9
-    P5 --- S9
-    P13["Bayesian TSA (TBC)"]:::bmv --- S13
-    P14["bayesfoRest"]:::bmv --- S10 & S11 & S12 & S14
-```
-
-> A static version of the diagram (with hexes in place of node labels) can be swapped in once the artwork is final:
-> `<img src="man/figures/workflow.png" alt="Bayesian Metaverse workflow">`
-
-### Stage → package lookup
-
-| Stage | Bayesian Metaverse | Key functions | Related software |
-|:------|:-------------------|:--------------|:-----------------|
-| Data preparation | entRy *(TBC)* | `launch_data_entry()` | — |
-| Trustworthiness | inspectR | `inspect_sr()`, `inspect_sr_table()`, `inspect_sr_plot()`, `filter_trustworthy()` | scrutiny |
-| Risk of bias | robbR | `rob_plot()` | — |
-| Preliminary exploration | bayesma | `primed()` | — |
-| Model specification | bayesma | `bayesma(sample_prior = TRUE)`, `pp_check()` | brms |
-| Model fitting | bayesma | `bayesma()` | Stan, brms, bayesmeta, MetaStan |
-| Diagnostics | bayesma | `diagnostics()`, `pp_check()` | — |
-| Model comparison | bayesma | `compare_models()`, `compare_table()`, `compare_plot()` | — |
-| Publication bias | bayesma | `egger()`, `funnel_plot()`, `robma()` | RoBMA |
-| Heterogeneity | bayesma, bayesfoRest | `bayesma(re_dist = "mixture")`, `forest()` | bayesmeta |
-| Subgroups / meta-regression | bayesma, bayesfoRest | `meta_reg()`, `metareg_mod_plot()`, `forest(subgroup = TRUE)` | brms |
-| Sensitivity analysis | bayesma, bayesfoRest | `sensitivity_plot()` | — |
-| Sequential evidence | Bayesian TSA *(TBC)* | TBA | — |
-| Interpretation & reporting | bayesma, bayesfoRest | `interpret()`, `overall_plot()`, `forest()` | — |
-
----
-
-## Related software
-
-The Bayesian Metaverse builds on, and is designed to sit alongside, established tools. These packages are maintained independently by their authors and are listed here with permission. <!-- confirm permission before publishing -->
-
-| Hex | Package | Description | Link |
-|:---:|:--------|:------------|:-----|
-| <img src="man/figures/hex/stan.png" width="60"> | **Stan** | Probabilistic programming language for Bayesian inference; the engine behind bayesma. | [mc-stan.org](https://mc-stan.org/) |
-| <img src="man/figures/hex/brms.png" width="60"> | **brms** | Bayesian (multilevel) regression models via Stan using formula syntax; flexible for bespoke meta-analytic models. | [paul-buerkner.github.io/brms](https://paul-buerkner.github.io/brms/) |
-| <img src="man/figures/hex/bayesmeta.png" width="60"> | **bayesmeta** | Fast, semi-analytical Bayesian random-effects meta-analysis for the normal–normal hierarchical model. | [CRAN](https://cran.r-project.org/package=bayesmeta) |
-| <img src="man/figures/hex/metastan.png" width="60"> | **MetaStan** | Bayesian meta-analysis via Stan, including binomial–normal models and model-based meta-analysis. | [CRAN](https://cran.r-project.org/package=MetaStan) |
-| <img src="man/figures/hex/robma.png" width="60"> | **RoBMA** | Robust Bayesian meta-analysis: Bayesian model averaging over effect, heterogeneity and publication bias models. | [CRAN](https://cran.r-project.org/package=RoBMA) |
-| <img src="man/figures/hex/scrutiny.png" width="60"> | **scrutiny** | Error detection in summary statistics (GRIM, GRIMMER, DEBIT); supports trustworthiness checks. | [lhdjung.github.io/scrutiny](https://lhdjung.github.io/scrutiny/) |
-
----
-
-## Guidance and resources
-
-- **Workflow** — [Bayesian MA workflow diagram](https://blmoran.github.io/bayesma/articles/workflow-diagram.html)
-- **Data entry** — [Data entry app](https://blmoran.github.io/bayesma/articles/data-entry.html)
-- **Trustworthiness** — INSPECT-SR: Wilkinson J, et al. *BMJ* (2025)
-- **Sequential analysis** — Spence GT, Steinsaltz D, Fanshawe TR. A Bayesian approach to sequential meta-analysis. *Stat Med*. 2016;35(29):5356–5375.
-- **Further reading** — *(add tutorials, reporting guidelines, e.g. ROBUST/BayesMA reporting checklists)*
-
----
-
-## Contributing
-
-Contributions, issues and feature requests are welcome. Please open an issue in the relevant package repository, or start a discussion in the [Bayesian Metaverse organisation](https://github.com/bayesian-metaverse).
+`bayesma` uses Stan via [cmdstanr](https://mc-stan.org/cmdstanr/). See the [bayesma installation guide](https://blmoran.github.io/bayesma/) for setting up CmdStan.
 
 ## Citation
 
-If you use the Bayesian Metaverse packages, please cite the individual packages you use (`citation("bayesma")`) and the underlying methods papers.
+If you use Bayes-Metaverse, please cite the packages you use and the underlying methods:
 
-## Authors
+```r
+citation("bayesmetaverse")
+citation("bayesma")
+```
 
-Benjamin Moran · Thomas Payne · *(add contributors)*
+```bibtex
+@Manual{bayesmetaverse,
+  title  = {Bayes-Metaverse: Tools, Methods and Resources for Bayesian Meta-Analysis},
+  author = {Benjamin Moran and Thomas Payne},
+  year   = {2026},
+  note   = {R package version 0.0.0.9000},
+  url    = {https://github.com/bayesian-metaverse/bayesmetaverse},
+}
+```
 
-## Licence
+## Feedback, issues and contribution
 
-*(add licence)*
+- **Bugs and feature requests:** open an issue in the relevant package repository, or in [bayesmetaverse](https://github.com/bayesian-metaverse/bayesmetaverse/issues) if you're not sure which package.
+- **Questions and ideas:** use [GitHub Discussions](https://github.com/bayesian-metaverse/bayesmetaverse/discussions).
+- **Contributions:** pull requests are welcome. Please read the [contributing guide](.github/CONTRIBUTING.md) first.
+- **Code of conduct:** this project follows a [Contributor Code of Conduct](.github/CODE_OF_CONDUCT.md). By participating, you agree to abide by its terms.
+
+## License
+
+Bayes-Metaverse packages are released under the [MIT License](LICENSE.md).
+
+## Acknowledgements
+
+- The [Stan Development Team](https://mc-stan.org/) for Stan, cmdstanr and the wider Stan ecosystem.
+- The [INSPECT-SR](https://doi.org/10.1136/bmj-2024-082233) team, whose framework underpins inspectR.
+- Spence, Steinsaltz & Fanshawe (2016) for the Bayesian sequential meta-analysis methods.
+- The authors of [brms](https://paul-buerkner.github.io/brms/), [bayesmeta](https://cran.r-project.org/package=bayesmeta), [MetaStan](https://cran.r-project.org/package=MetaStan), [RoBMA](https://cran.r-project.org/package=RoBMA) and [scrutiny](https://lhdjung.github.io/scrutiny/), whose work informs and complements this project.
+- Inspired by [tidyverse](https://www.tidyverse.org/), [easystats](https://easystats.github.io/easystats/), [fastverse](https://fastverse.org/) and [metaverse](https://rmetaverse.github.io/).

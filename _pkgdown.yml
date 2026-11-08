@@ -1,0 +1,36 @@
+url: https://bayesian-metaverse.github.io/bayesmetaverse/
+
+template:
+  bootstrap: 5
+  light-switch: true
+  bslib:
+    primary: "#1F3A5F"
+    base_font: {google: "Inter"}
+    heading_font: {google: "Poppins"}
+
+home:
+  title: "Bayes-Metaverse: Tools, Methods and Resources for Bayesian Meta-Analysis"
+  sidebar:
+    structure: [links, packages, license, community, citation, authors, dev]
+    components:
+      packages:
+        title: Packages
+        text: |
+          [bayesmaDatR](https://github.com/BLMoran/bayesmaDatR)<br>
+          [inspectR](https://github.com/BLMoran/inspectR)<br>
+          [robbR](https://github.com/BLMoran/robbR)<br>
+          [bayesma](https://blmoran.github.io/bayesma/)<br>
+          [bayesfoRest](https://blmoran.github.io/bayesfoRest/)
+
+navbar:
+  structure:
+    left: [intro, reference, articles, news]
+    right: [search, github, lightswitch]
+  components:
+    intro:
+      text: Getting Started
+      href: articles/bayesmetaverse.html
+    github:
+      icon: fab fa-github
+      href: https://github.com/bayesian-metaverse/bayesmetaverse
+      aria-label: GitHub

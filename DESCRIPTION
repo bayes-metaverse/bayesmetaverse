@@ -1,13 +1,31 @@
 Package: bayesmetaverse
-Title: What the Package Does (One Line, Title Case)
+Title: Tools, Methods and Resources for Bayesian Meta-Analysis
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Authors@R: c(
+    person(
+      "Benjamin", "Moran",
+      email = "ben.moran@newcastle.edu.au",
+      comment = c(ORCID = "0000-0002-6515-6722"),
+      role = c("aut", "cre")),
+    person(
+      "Thomas", "Payne",
+      email = "tompayne302@gmail.com",
+      comment = c(ORCID = "0000-0002-5530-3717"),
+      role = c("aut", "ctb")))
+Description: Installs and loads the Bayes-Metaverse suite of packages for a
+    principled, reproducible Bayesian meta-analysis workflow.
+License: MIT + file LICENSE
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 8.1.0
-URL: https://github.com/bayes-metaverse/bayesmetaverse
-BugReports: https://github.com/bayes-metaverse/bayesmetaverse/issues
+URL: https://bayesian-metaverse.github.io/bayesmetaverse/, https://github.com/bayesian-metaverse/bayesmetaverse
+BugReports: https://github.com/bayesian-metaverse/bayesmetaverse/issues
+Imports:
+    bayesma,
+    bayesfoRest
+Remotes:
+    BLMoran/bayesma,
+    BLMoran/bayesfoRest
+Suggests:
+    knitr,
+    quarto
+VignetteBuilder: quarto
+Config/Needs/website: pkgdown

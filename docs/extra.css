@@ -1,0 +1,82 @@
+/* Bayes-Metaverse workflow styling */
+
+.bmv-strip {
+  display: flex; align-items: center; justify-content: center;
+  flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0 2rem;
+}
+.bmv-strip img { height: 90px; }
+.bmv-strip span { font-size: 1.6rem; line-height: 1; color: #1F6F8B; }
+
+.bmv-phase {
+  margin: 2.2rem 0 .8rem; padding: .3rem .9rem;
+  display: inline-block; border-radius: 999px;
+  background: #1F3A5F; color: #fff; font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase; font-size: .85rem;
+}
+.bmv-phase p { margin: 0; }
+
+.bmv-stage {
+  display: flex; gap: 1.2rem; align-items: flex-start;
+  border: 1px solid #d8e2ea; border-left: 5px solid #1F6F8B;
+  border-radius: 10px; padding: 1rem 1.2rem; margin: 0 0 1rem;
+  background: #fbfdfe;
+}
+.bmv-hexes {
+  flex: 0 0 110px; display: flex; flex-wrap: wrap;
+  gap: .3rem; justify-content: center;
+}
+.bmv-hexes img { height: 64px; }
+.bmv-hexes img:only-child { height: 96px; }
+.bmv-nohex {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  width: 84px; height: 96px; font-size: .75rem; color: #5a6b7b;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  background: #e7eef4;
+}
+.bmv-body { flex: 1; min-width: 0; }
+.bmv-body h3 { margin-top: 0; font-size: 1.15rem; }
+.bmv-body pre { margin-bottom: .4rem; }
+.bmv-ext { font-size: .85rem; color: #5a6b7b; margin: .3rem 0 0; }
+
+@media (max-width: 600px) {
+  .bmv-stage { flex-direction: column; }
+  .bmv-hexes { flex-basis: auto; justify-content: flex-start; }
+}
+
+[data-bs-theme="dark"] .bmv-stage { background: #18232e; border-color: #2b3a48; border-left-color: #4fa3c0; }
+[data-bs-theme="dark"] .bmv-nohex { background: #2b3a48; color: #c8d4de; }
+
+/* Package suite: honeycomb of pointy-top hexes with parallel edges */
+.bmv-suite {
+  --hex-w: 150px;
+  --hex-h: calc(var(--hex-w) * 1.1547);
+  --hex-gap: 8px;
+  --hex-dx: calc((var(--hex-w) + var(--hex-gap)) / 2);
+  --hex-dy: calc((var(--hex-w) + var(--hex-gap)) * 0.866);
+  margin: 1.5rem 0 2rem;
+}
+.bmv-pkg {
+  display: flex; align-items: center; gap: 1.5rem;
+  margin-top: calc(var(--hex-dy) - var(--hex-h));
+}
+.bmv-pkg:first-child { margin-top: 0; }
+.bmv-hex {
+  flex: 0 0 calc(var(--hex-w) + var(--hex-dx));
+  display: flex; justify-content: flex-start;
+}
+.bmv-hex img {
+  width: var(--hex-w); height: var(--hex-h);
+  object-fit: fill; transition: transform .15s;
+}
+.bmv-hex img:hover { transform: scale(1.05); }
+.bmv-pkg:nth-child(odd)  .bmv-hex { justify-content: flex-end; }
+.bmv-pkg:nth-child(even) .bmv-hex { justify-content: flex-start; }
+.bmv-pkg-text { flex: 1; min-width: 0; }
+.bmv-pkg-desc { font-size: 1.1rem; margin: 0 0 .4rem; }
+.bmv-pkg-badges { margin: 0; }
+.bmv-pkg-badges img { margin-right: .25rem; }
+
+@media (max-width: 700px) {
+  .bmv-pkg { margin-top: 1rem; flex-direction: column; align-items: flex-start; }
+  .bmv-hex { flex-basis: auto; }
+}

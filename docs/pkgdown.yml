@@ -1,0 +1,9 @@
+pandoc: '3.10'
+pkgdown: 2.2.1
+pkgdown_sha: ~
+articles:
+  bayesmetaverse: bayesmetaverse.html
+last_built: 2026-11-08T10:17Z
+urls:
+  reference: https://bayesian-metaverse.github.io/bayesmetaverse/reference
+  article: https://bayesian-metaverse.github.io/bayesmetaverse/articles
